@@ -1,11 +1,9 @@
-*{
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: white;
+
 }
-.icons-size{padding:5px;border-radius: 100%;display: flex;justify-content: center;align-items: center;}
-.icons-size img{width: 25px;height: 25px;}
-.icons-size:hover{cursor: pointer;}
-.opcoes-header{color: white;}
-.opcoes-header:hover{cursor: pointer; text-decoration: underline; text-underline-offset: 8px;}
