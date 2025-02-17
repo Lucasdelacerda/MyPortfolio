@@ -20,7 +20,7 @@ export default function Contacts() {
 
 
     return (
-        <section className="flex flex-col  items-center bg-[url(images/Background_Contacts.png)] bg-center bg-cover h-screen">
+        <section className="flex flex-col  items-center bg-[url('/images/Background_Contacts.png')] bg-center bg-cover h-screen">
             <h3 className="font-light text-2xl mt-20 text-Purple mt-8 asap">Contato</h3>
             <h2 className="font-semibold text-White text-3xl asap">Gostou do meu trabalho?</h2>
             <p className="font-light text-xl text-Gray-500 maven">Entre em contato ou acompanhe as minhas redes sociais!</p>

@@ -1,7 +1,7 @@
 
 export default function Home() {
     return (
-        <section className='flex flex-col bg-cover bg-center justify-center items-center bg-[url(images/Background_Home.png)] h-screen '>
+        <section className="flex flex-col bg-cover bg-center justify-center items-center bg-[url('/images/Background_Contacts.png')] h-screen ">
             <img className="rounded-full w-[112px] h-[112px] border-2 border-Red mb-14" src="images/perfil.jpg" alt="Perfil Image" />
             <h3 className="text-Gray-500 text-2xl font-light asap"><span className='font-light text-Gray-500 inconsolata'>Hello World!</span> Meu nome é <span className="text-Red">Lucas de Lacerda</span> e sou</h3>
             <h1 className="font-bold text-6xl mt-4 asap">Desenvolvedor Front-end</h1>
