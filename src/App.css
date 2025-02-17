@@ -7,3 +7,21 @@
     color: white;
 
 }
+
+.asap {
+    font-family: "Asap", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.inconsolata {
+    font-family: "Inconsolata", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.maven {
+    font-family: "Maven Pro", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}

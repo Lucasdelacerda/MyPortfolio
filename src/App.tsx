@@ -8,7 +8,7 @@ function App() {
     <>
       <Home/>
       <Projects/>
-      {/* <Contacts/> */}
+      <Contacts/>
     </>
   )
 }
