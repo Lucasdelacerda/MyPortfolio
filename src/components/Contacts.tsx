@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-
+import { useLanguage } from "./LanguageContext";
 export default function Contacts() {
-
+    const { english, toggleLanguage } = useLanguage();
     const [copied, setCopied] = useState(false);
     const email = 'lacerdalucas270@gmail.com';
 
@@ -21,13 +21,14 @@ export default function Contacts() {
 
     return (
         <section className="flex flex-col  items-center bg-[url('/images/Background_Contacts.png')] bg-center bg-cover pb-[80px]">
-            <h3 className="font-light mt-20 text-Purple mt-8 asap text-xl md:text-2xl">Contato</h3>
-            <h2 className="font-semibold text-White text-2xl md:text-3xl asap">Gostou do meu trabalho?</h2>
-            <p className="font-light text-base w-[80vw] md:text-xl text-Gray-500 maven">Entre em contato ou acompanhe as minhas redes sociais!</p>
+            {english ? <h3 className="font-light mt-20 text-Purple mt-8 asap text-xl md:text-2xl">Contact</h3> : <h3 className="font-light mt-20 text-Purple mt-8 asap text-xl md:text-2xl">Contato</h3>}
+            {english ? <h2 className="font-semibold text-White text-2xl md:text-3xl asap">Did you like my work? Contact me!</h2> : <h2 className="font-semibold text-White text-2xl md:text-3xl asap">Gostou do meu trabalho? Entre em contato!</h2>}
+
             <div className="flex flex-col justify-center gap-3 items-center w-[80vw] md:w-[400px] h-[400px] mt-12">
                 <a target="_blank" href='https://drive.google.com/file/d/110ha8y6q7pValHLsUBtbT6rKe1gxayj1/view?usp=sharing' className="max-h-[60px] cursor-pointer flex w-full h-1/5 p-5 bg-Gray-300 rounded-lg items-center hover:transform hover:scale-105 duration-300 ">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#878ea1" viewBox="0 0 256 256"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"></path></svg>
-                    <h3 className="maven ml-3 text-base text-white maven">Currículo</h3>
+                    {english ? <h3 className="maven ml-3 text-base text-white maven">Download my CV</h3> : <h3 className="maven ml-3 text-base text-white maven">Baixe meu Currículo</h3>}
+
                     <svg className='ml-auto' width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.625 5V13.125C15.625 13.2908 15.5591 13.4497 15.4419 13.5669C15.3247 13.6842 15.1657 13.75 15 13.75C14.8342 13.75 14.6753 13.6842 14.558 13.5669C14.4408 13.4497 14.375 13.2908 14.375 13.125V6.50859L5.44217 15.4422C5.32489 15.5595 5.16583 15.6253 4.99998 15.6253C4.83413 15.6253 4.67507 15.5595 4.55779 15.4422C4.44052 15.3249 4.37463 15.1659 4.37463 15C4.37463 14.8341 4.44052 14.6751 4.55779 14.5578L13.4914 5.625H6.87498C6.70922 5.625 6.55025 5.55915 6.43304 5.44194C6.31583 5.32473 6.24998 5.16576 6.24998 5C6.24998 4.83424 6.31583 4.67527 6.43304 4.55806C6.55025 4.44085 6.70922 4.375 6.87498 4.375H15C15.1657 4.375 15.3247 4.44085 15.4419 4.55806C15.5591 4.67527 15.625 4.83424 15.625 5Z" fill="#3996DB" />
                     </svg>
@@ -74,14 +75,16 @@ export default function Contacts() {
                     type="button"
                     className={`max-h-[60px] cursor-pointer flex w-full h-1/5 p-5 ${copied ? 'bg-green-500' : 'bg-Gray-300'} rounded-lg items-center hover:transform hover:scale-105 duration-300`}
                 >
-                    {copied ? <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#4B77D1"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> : <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    {copied ? <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#4B77D1"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg> : <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24.5 5.25H3.5C3.26794 5.25 3.04538 5.34219 2.88128 5.50628C2.71719 5.67038 2.625 5.89294 2.625 6.125V21C2.625 21.4641 2.80937 21.9092 3.13756 22.2374C3.46575 22.5656 3.91087 22.75 4.375 22.75H23.625C24.0891 22.75 24.5342 22.5656 24.8624 22.2374C25.1906 21.9092 25.375 21.4641 25.375 21V6.125C25.375 5.89294 25.2828 5.67038 25.1187 5.50628C24.9546 5.34219 24.7321 5.25 24.5 5.25ZM22.2502 7L14 14.5633L5.74984 7H22.2502ZM23.625 21H4.375V8.11453L13.4083 16.3953C13.5697 16.5435 13.7809 16.6257 14 16.6257C14.2191 16.6257 14.4303 16.5435 14.5917 16.3953L23.625 8.11453V21Z" fill="#878EA1" />
                     </svg>}
 
-
-                    <h3 className="maven ml-3 text-base text-white">
+                    {english ? <h3 className="maven ml-3 text-base text-white">
+                        {copied ? 'Copied' : 'Copy E-mail'}
+                    </h3> : <h3 className="maven ml-3 text-base text-white">
                         {copied ? 'Copiado' : 'Copiar E-mail'}
-                    </h3>
+                    </h3>}
+
                     {copied ? '' : <svg className="ml-auto" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.625 5V13.125C15.625 13.2908 15.5591 13.4497 15.4419 13.5669C15.3247 13.6842 15.1657 13.75 15 13.75C14.8342 13.75 14.6753 13.6842 14.558 13.5669C14.4408 13.4497 14.375 13.2908 14.375 13.125V6.50859L5.44217 15.4422C5.32489 15.5595 5.16583 15.6253 4.99998 15.6253C4.83413 15.6253 4.67507 15.5595 4.55779 15.4422C4.44052 15.3249 4.37463 15.1659 4.37463 15C4.37463 14.8341 4.44052 14.6751 4.55779 14.5578L13.4914 5.625H6.87498C6.70922 5.625 6.55025 5.55915 6.43304 5.44194C6.31583 5.32473 6.24998 5.16576 6.24998 5C6.24998 4.83424 6.31583 4.67527 6.43304 4.55806C6.55025 4.44085 6.70922 4.375 6.87498 4.375H15C15.1657 4.375 15.3247 4.44085 15.4419 4.55806C15.5591 4.67527 15.625 4.83424 15.625 5Z" fill="#3996DB" />
                     </svg>}
