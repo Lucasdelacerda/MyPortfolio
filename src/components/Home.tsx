@@ -26,6 +26,7 @@ export default function Home() {
                 <li className="font-bold maven rounded-full px-3 py-1 bg-Blue text-Gray-200 cursor-pointer text-sm md:text-base">ReactJS</li>
                 <li className="font-bold maven rounded-full px-3 py-1 bg-Red text-Gray-200 cursor-pointer text-sm md:text-base">NextJS</li>
                 <li className="font-bold maven rounded-full px-3 py-1 bg-Green text-Gray-200 cursor-pointer text-sm md:text-base">NODEJS</li>
+                <li className="font-bold maven rounded-full px-3 py-1 bg-Blue text-Gray-200 cursor-pointer text-sm md:text-base">TailwindCSS</li>
 
             </ul>
         </section>
