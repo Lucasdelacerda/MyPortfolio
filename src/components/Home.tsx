@@ -1,14 +1,17 @@
-import {useLanguage} from "./LanguageContext"
+import { useLanguage } from "./LanguageContext"
 
 export default function Home() {
-    const {english, toggleLanguage} = useLanguage();
+    const { english, toggleLanguage } = useLanguage();
 
     return (
 
-        <section className="flex flex-col bg-cover bg-center justify-center items-center bg-[url('/images/Background_Home.png')] h-screen ">
+        <section className="flex flex-col bg-cover bg-center justify-start pt-10 items-center bg-[url('/images/Background_Home.png')] h-screen ">
             <a className="ml-[88%]" onClick={toggleLanguage} href="#">
-                {english ? <img className=' w-6 h-6' src='./icons/BrazilFlag.svg' alt='USA flag icon' /> : <img className=' w-6 h-6' src='./icons/USAflag.svg' alt='USA flag icon' />}
-
+                {english ? (
+                    <img className="w-6 h-6" src="./icons/BrazilFlag.svg" alt="Brazil flag icon" />
+                ) : (
+                    <img className="w-6 h-6" src="./icons/USAflag.svg" alt="USA flag icon" />
+                )}
             </a>
             <img className="rounded-full w-[112px] h-[112px] mt-2 border-2 border-Red mb-14" src="images/perfil.jpg" alt="Perfil Image" />
 
