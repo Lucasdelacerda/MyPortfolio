@@ -32,13 +32,6 @@ export default function Contacts() {
             </h2>
 
             <div className="flex flex-col justify-center gap-3 items-center w-[80vw] md:w-[400px] h-[400px] mt-12">
-                <a target="_blank" href='https://drive.google.com/file/d/1ZM0abVonBzMbNoiWEQZ0VJHz-g73IUI5/view' className="max-h-[60px] cursor-pointer flex w-full h-1/5 p-5 bg-Gray-300 rounded-lg items-center hover:transform hover:scale-105 duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#878ea1" viewBox="0 0 256 256"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"></path></svg>
-                    <h3 className="maven ml-3 text-base text-white">{english ? "Download my CV" : "Baixe meu Currículo"}</h3>
-                    <svg className='ml-auto' width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.625 5V13.125C15.625 13.2908 15.5591 13.4497 15.4419 13.5669C15.3247 13.6842 15.1657 13.75 15 13.75C14.8342 13.75 14.6753 13.6842 14.558 13.5669C14.4408 13.4497 14.375 13.2908 14.375 13.125V6.50859L5.44217 15.4422C5.32489 15.5595 5.16583 15.6253 4.99998 15.6253C4.83413 15.6253 4.67507 15.5595 4.55779 15.4422C4.44052 15.3249 4.37463 15.1659 4.37463 15C4.37463 14.8341 4.44052 14.6751 4.55779 14.5578L13.4914 5.625H6.87498C6.70922 5.625 6.55025 5.55915 6.43304 5.44194C6.31583 5.32473 6.24998 5.16576 6.24998 5C6.24998 4.83424 6.31583 4.67527 6.43304 4.55806C6.55025 4.44085 6.70922 4.375 6.87498 4.375H15C15.1657 4.375 15.3247 4.44085 15.4419 4.55806C15.5591 4.67527 15.625 4.83424 15.625 5Z" fill="#3996DB" />
-                    </svg>
-                </a>
 
                 <a target="_blank" href='https://www.linkedin.com/in/lucas-lacerda-066316186/' className="max-h-[60px] cursor-pointer flex w-full h-1/5 p-5 bg-Gray-300 rounded-lg items-center hover:transform hover:scale-105 duration-300">
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
